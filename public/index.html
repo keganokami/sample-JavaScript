@@ -1,13 +1,93 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>AWAKE</title>
-    <style>body { text-align: center; }</style>
-  </head>
-  <body>
-    <h1>AWAKE</h1>
-    <p>I'm awakening in the new world</p>
-    <a href="https://github.com/syon/awake">https://github.com/syon/awake</a>
-  </body>
+
+<head>
+    <title>HTML, CSS and JavaScript demo</title>
+</head>
+<script src="./script.js"></script>
+
+<body>
+    <div class="command-area">
+        <div>
+            <div>
+                右に<input id="right-steps" type="number" />歩進む
+                <button onclick="stepMultipleRight()">実行</button>
+            </div>
+            <div>
+                下に<input id="down-steps" type="number" />歩進む
+                <button onclick="stepMultipleDown()">実行</button>
+            </div>
+        </div>
+
+        <div class="btns">
+            <div class="up">
+                <button onclick="stepUp()">↑</button>
+            </div>
+            <div class="up-down">
+                <button onclick="stepLeft()">←</button>
+                <button onclick="stepDown()">↓</button>
+                <button onclick="stepRight()">→</button>
+            </div>
+        </div>
+    </div>
+    <div id="main-area">
+        <!-- https://hpgpixer.jp/image_icons/animals/icon_animal_cat_2.html -->
+        <img id="cat" src="https://user-images.githubusercontent.com/39263724/157788409-f875512d-e5f8-42d9-8dd6-5cf670fc7def.gif">
+    </div>
+    <div>
+        <button class="reset" onclick="reset()">リセット</button>
+    </div>
+</body>
+
 </html>
+<style>
+    .command-area {
+        display: flex;
+    }
+    
+    input {
+        width: 50px;
+    }
+    
+    #main-area {
+        /* box-sizing: border-box; */
+        margin: 10px 0;
+        position: relative;
+        width: 480px;
+        height: 192px;
+        border: 1px gray solid;
+    }
+    
+    #cat {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        top: 0;
+        left: 0;
+    }
+    
+    .btns {
+        width: 180px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 5%;
+    }
+    
+    button {
+        width: 60px;
+        height: 30px;
+    }
+    
+    .up {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .up-down {
+        display: flex;
+    }
+    
+    .reset {
+        width: inherit;
+    }
+</style>
