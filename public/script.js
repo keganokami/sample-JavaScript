@@ -1,15 +1,9 @@
-// Write JavaScript here 
-
 let x = 0;
 let y = 0;
 let stepNum = 0;
 
-document.getElementById("cat").style.top = '32px';
-
-
 function stepDown() {
     if (y >= 160) {
-        alert('いきどまり')
         return;
     }
     y += 32;
